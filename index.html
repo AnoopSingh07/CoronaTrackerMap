@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./CCMapMarker.png">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .marker {
+            width: 34px;
+        }
+
+        h2,
+        h1 {
+            color:#eed9d5;
+        }
+
+        h1 {
+            margin-top: 6px;
+        }
+
+        span {
+            font-size: 13px;
+            color: rgb(244, 205, 132);
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: row;
+            z-index: +1;
+            position: absolute;
+            width: 100%;
+            justify-content: center;
+
+        }
+
+        .notesection {
+            display: flex;
+            flex-direction: column;
+            z-index: +1;
+            position: absolute;
+            top: 80%;
+            right: 2%;
+        }
+
+        .note {
+            margin: 7px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .headingnote {
+            margin: 7px;
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(0 139 139 / 50%);
+            border-radius: 21px;
+            box-shadow: 1px 1px 4px 1px rgb(73 177 177);
+            padding: 5px 5px;
+        }
+    </style>
+    <title>Corona-Track Map</title>
+</head>
+
+<body>
+    <div id='map'>
+        <div class="heading">
+            <div class="headingnote">
+                <img class="marker" src="./CCMapMarker.png" alt="logo">
+                <h1>Corona Tracker</h1>
+            </div>
+        </div>
+        <div class="notesection">
+            <div class="note">
+                <img class="marker" src="./redMapMarker.png" alt="red" />
+                <div>
+                    <h2>high alert</h2>
+                    <span>(more than 200 corona cases)</span>
+                </div>
+            </div>
+            <div class="note">
+
+                <img class="marker" src="./blackMapMarker.png" alt="black" />
+                <div>
+                    <h2>controlled situation</h2>
+                    <span>(less than 200 corona cases)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFycnkxMjM0OTgiLCJhIjoiY2s4OXh1c3BqMGFsZzNvbXA3YmYyaGFhYSJ9.wmVMiMxlSqpzJPsj-UXr3Q';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1,
+        center: [0, 20]  //[logitude,latitude]
+    });
+</script>
+
+<script src="index.js"></script>
+
+</html>
