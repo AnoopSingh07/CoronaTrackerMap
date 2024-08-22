@@ -1,8 +1,8 @@
-# Corona Case Tracker Map
+# Global Pandemic Monitoring Dashboard
 
 ## Overview
 
-**Corona Case Tracker Map** is a web application that visualizes real-time severity of coronavirus cases across the world using Mapbox and the Fetch API. This project was developed to provide a clear and interactive representation of COVID-19 data globally, helping users to easily understand the distribution and severity of cases.
+**Corona Case Tracker Map/Global Pandemic Monitoring Dashboard** is a web application that visualizes real-time severity of coronavirus cases across the world using Mapbox and the Fetch API. This project was developed to provide a clear and interactive representation of COVID-19 data globally, helping users to easily understand the distribution and severity of cases.
 
 ## Features
 
